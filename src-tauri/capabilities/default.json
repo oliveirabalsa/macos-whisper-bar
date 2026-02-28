@@ -1,0 +1,16 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "Default capability set for WhisperBar windows",
+  "windows": ["tray", "floating"],
+  "permissions": [
+    "core:default",
+    "core:event:default",
+    "core:menu:default",
+    "core:path:default",
+    "core:tray:default",
+    "core:webview:default",
+    "core:window:default",
+    "core:window:allow-start-dragging"
+  ]
+}

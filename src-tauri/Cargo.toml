@@ -1,0 +1,25 @@
+[package]
+name = "whisperbar"
+version = "0.1.0"
+description = "WhisperBar local transcription menu bar app"
+authors = ["WhisperBar"]
+edition = "2021"
+
+[lib]
+name = "whisperbar_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "=2.5.5", features = [] }
+
+[dependencies]
+anyhow = "1.0"
+chrono = { version = "0.4", features = ["clock"] }
+dirs = "5.0"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tauri = { version = "=2.10.2", features = ["tray-icon", "macos-private-api", "image-png"] }
+tokio = { version = "1.41.1", features = ["macros", "process", "rt-multi-thread", "io-util", "sync", "time", "fs"] }
+time = "=0.3.36"
+regex = "1.11.1"
+screencapturekit = "1.5.1"

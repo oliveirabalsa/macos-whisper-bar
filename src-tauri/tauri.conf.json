@@ -1,0 +1,24 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "WhisperBar",
+  "version": "0.1.0",
+  "identifier": "com.whisperbar",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "devUrl": "http://localhost:5173",
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "withGlobalTauri": false,
+    "macOSPrivateApi": true,
+    "windows": []
+  },
+  "bundle": {
+    "active": true,
+    "targets": "dmg",
+    "macOS": {
+      "infoPlist": "Info.plist"
+    }
+  }
+}
